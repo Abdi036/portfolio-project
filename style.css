@@ -85,7 +85,6 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
-  border: 3px solid red;
 }
 
 /* homepage style */
@@ -155,7 +154,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #0a0b0e;
   color: #ffffff;
 }
@@ -172,7 +171,8 @@ body {
   justify-content: space-between;
 }
 
-.education, .experience {
+.education,
+.experience {
   width: 45%;
 }
 
@@ -221,13 +221,119 @@ p {
 
 @media (max-width: 768px) {
   .container {
-      flex-direction: column;
-      width: 90%;
+    flex-direction: column;
+    width: 90%;
   }
-  
-  .education, .experience {
-      width: 100%;
+
+  .education,
+  .experience {
+    width: 100%;
   }
 }
 
+/* service */
 
+.container {
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-description {
+  width: 40%;
+}
+
+.service-description h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.service-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #00ff88;
+  color: #0a0b0e;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #00cc70;
+}
+
+.dots {
+  width: 100px;
+  height: 100px;
+  background: repeating-linear-gradient(
+    45deg,
+    #00ff88,
+    #00ff88 5px,
+    #0a0b0e 5px,
+    #0a0b0e 10px
+  );
+  margin-top: 30px;
+}
+
+.service-list {
+  width: 55%;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  background-color: #1a1b1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.service-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.service-details {
+  flex-grow: 1;
+}
+
+.service-details h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.service-details p {
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.rating {
+  width: 30px;
+  height: 30px;
+  background-color: #00ff88;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating span {
+  color: #0a0b0e;
+  font-weight: bold;
+}
