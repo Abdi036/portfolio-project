@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
   </head>
   <body>
     <div class="main_container">
@@ -98,7 +99,6 @@
                 interdum sagittis.
               </p>
               <button class="btn">ALL SERVICE</button>
-              <div class="dots"></div>
             </div>
             <div class="service-list">
               <div class="service-item">
@@ -134,35 +134,60 @@
             </div>
           </div>
         </section>
+
         <!-- portfolio -->
-        <!-- <section id="portfolio" class="portfolio">
-          <div class="container_homepage">
-            <h1>Portfolio</h1>
-          </div>
-        </section> -->
         <div class="container">
-          <h1>Latest Project</h1>
-          <div class="project-container">
-            <div class="project-card">
-              <img src="dashboard-design-1.jpg" alt="Dashboard Design 1" />
-              <h2>Dashboard Design</h2>
-              <p>APP CASE STUDY</p>
-              <p>7</p>
+          <header>
+            <h2>Best Of Our Works</h2>
+            <h1>Latest Project</h1>
+            <div class="filters">
+              <button class="filter-btn" onclick="filterProjects('all')">
+                All Design
+              </button>
+              <button class="filter-btn" onclick="filterProjects('ux-ui')">
+                UX/UI
+              </button>
+              <button class="filter-btn" onclick="filterProjects('branding')">
+                Branding
+              </button>
+              <button class="filter-btn" onclick="filterProjects('design')">
+                Design
+              </button>
             </div>
-            <div class="project-card">
-              <img src="dashboard-design-2.jpg" alt="Dashboard Design 2" />
-              <h2>Dashboard Design</h2>
-              <p>APP CASE STUDY</p>
-              <p>7</p>
+          </header>
+          <section class="projects">
+            <div class="project ux-ui">
+              <img
+                src="https://via.placeholder.com/300x200.png?text=Dashboard+Design"
+                alt="Dashboard Design"
+              />
+              <div class="project-info">
+                <h3>Dashboard Design</h3>
+                <p>APP CASE STUDY</p>
+              </div>
             </div>
-            <div class="project-card">
-              <img src="dashboard-design-3.jpg" alt="Dashboard Design 3" />
-              <h2>Dashboard Design</h2>
-              <p>APP CASE STUDY</p>
-              <p>7</p>
+            <div class="project ux-ui">
+              <img
+                src="https://via.placeholder.com/300x200.png?text=Dashboard+Design"
+                alt="Dashboard Design"
+              />
+              <div class="project-info">
+                <h3>Dashboard Design</h3>
+                <p>APP CASE STUDY</p>
+              </div>
             </div>
-          </div>
-          <button class="view-all-btn">View All Works</button>
+            <div class="project ux-ui">
+              <img
+                src="https://via.placeholder.com/300x200.png?text=Dashboard+Design"
+                alt="Dashboard Design"
+              />
+              <div class="project-info">
+                <h3>Dashboard Design</h3>
+                <p>APP CASE STUDY</p>
+              </div>
+            </div>
+          </section>
+          <button class="view-portfolio">View All Portfolio</button>
         </div>
         <!-- contact -->
         <section id="contact" class="contact">
