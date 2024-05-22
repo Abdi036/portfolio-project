@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -69,7 +72,6 @@ body {
   margin-left: 20%;
   width: 80%;
   overflow-y: auto;
-  padding: 20px;
 }
 
 .homepage,
@@ -83,24 +85,46 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
   border: 3px solid red;
 }
 
-.styled-button {
-  background-color: #3498db;
-  color: #fff;
+.homepage {
+  background: url(bg-homepage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border: none;
-  border-radius: 25px;
+}
+
+.container_homepage h1 {
+  font-size: 55px;
+  padding: 20px 20px 0 20px;
+}
+.container_homepage h3 {
+  font-size: 30px;
+  padding: 0 20px 45px 20px;
+}
+.container_homepage h1 span {
+  color: rgb(52, 202, 180);
+}
+
+.styled-button {
+  text-decoration: none;
+  background-color: #000000b6;
+  color: rgb(52, 202, 180);
+  border-radius: 28px;
+  border: 2px solid rgb(52, 202, 180);
   padding: 15px 30px;
-  margin-top: 15px;
+  margin-left: 150px;
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .styled-button:hover {
-  background-color: #2980b9;
+  background-color: rgba(52, 202, 179, 0.846);
+  color: #fff;
   transform: translateY(-3px);
 }
 
