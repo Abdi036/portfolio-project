@@ -3,12 +3,20 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: Arial, sans-serif;
+}
+
 .main_container {
+  display: flex;
 }
 
 .navbar {
-  border: 1px solid red;
-  width: 18%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
   height: 100vh;
   padding: 25px;
   display: flex;
@@ -19,14 +27,14 @@
 }
 
 .profile_pic {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .profile_pic h2 {
-  padding: 20px;
+  margin-top: 10px;
 }
 
 .profile_pic img {
@@ -34,20 +42,69 @@
   height: 150px;
   border-radius: 75px;
 }
+
 .link_container {
-  padding: 43.8px;
-  border: 1px solid red;
+  flex-grow: 1;
 }
+
+.link_container ul {
+  list-style: none;
+  padding: 0;
+}
+
 .link_container ul li {
-  list-style-type: none;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
+
 .link_container ul li a {
   text-decoration: none;
   color: #fff;
 }
+
 .socialmedias {
-  margin-top: 30px;
-  padding: 20px 38px;
-  border: 1px solid red;
+  margin-top: auto;
+}
+
+.main-content {
+  margin-left: 20%;
+  width: 80%;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.homepage,
+.aboutme,
+.services,
+.portfolio,
+.contact {
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid red;
+}
+
+.styled-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 30px;
+  margin-top: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.styled-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+.styled-button:active {
+  background-color: #1c5986;
+  transform: translateY(0);
 }
