@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
+    <script
+      src="https://kit.fontawesome.com/eae02d504c.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
   </head>
@@ -136,63 +140,92 @@
         </section>
 
         <!-- portfolio -->
-        <div class="container">
-          <header>
-            <h2>Best Of Our Works</h2>
-            <h1>Latest Project</h1>
-            <div class="filters">
-              <button class="filter-btn" onclick="filterProjects('all')">
-                All Design
-              </button>
-              <button class="filter-btn" onclick="filterProjects('ux-ui')">
-                UX/UI
-              </button>
-              <button class="filter-btn" onclick="filterProjects('branding')">
-                Branding
-              </button>
-              <button class="filter-btn" onclick="filterProjects('design')">
-                Design
-              </button>
-            </div>
-          </header>
-          <section class="projects">
-            <div class="project ux-ui">
-              <img
-                src="https://via.placeholder.com/300x200.png?text=Dashboard+Design"
-                alt="Dashboard Design"
-              />
-              <div class="project-info">
-                <h3>Dashboard Design</h3>
-                <p>APP CASE STUDY</p>
+        <section class="portfolio" id="portfolio">
+          <h2>Portfolio</h2>
+          <div class="prj_container">
+            <div class="portfolio-list">
+              <div class="portfolio-item">
+                <div
+                  class="portfolio-img"
+                  style="background-image: url('img-1.jpg')"
+                ></div>
+                <div class="portfolio-details">
+                  <h3>Project Title 1</h3>
+                  <p>Short description of the project.</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <div
+                  class="portfolio-img"
+                  style="background-image: url('img-1.jpg')"
+                ></div>
+                <div class="portfolio-details">
+                  <h3>Project Title 2</h3>
+                  <p>Short description of the project.</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <div
+                  class="portfolio-img"
+                  style="background-image: url('img-1.jpg')"
+                ></div>
+                <div class="portfolio-details">
+                  <h3>Project Title 3</h3>
+                  <p>Short description of the project.</p>
+                </div>
               </div>
             </div>
-            <div class="project ux-ui">
-              <img
-                src="https://via.placeholder.com/300x200.png?text=Dashboard+Design"
-                alt="Dashboard Design"
-              />
-              <div class="project-info">
-                <h3>Dashboard Design</h3>
-                <p>APP CASE STUDY</p>
-              </div>
-            </div>
-            <div class="project ux-ui">
-              <img
-                src="https://via.placeholder.com/300x200.png?text=Dashboard+Design"
-                alt="Dashboard Design"
-              />
-              <div class="project-info">
-                <h3>Dashboard Design</h3>
-                <p>APP CASE STUDY</p>
-              </div>
-            </div>
-          </section>
-          <button class="view-portfolio">View All Portfolio</button>
-        </div>
+          </div>
+        </section>
+
         <!-- contact -->
         <section id="contact" class="contact">
           <div class="container_homepage">
-            <h1>Contact</h1>
+            <div class="contact" id="contact">
+              <div class="container">
+                <div class="row">
+                  <div class="col-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>
+                      <i class="fa-regular fa-envelope"></i
+                      >abdikumela036@gmail.com
+                    </p>
+                    <p><i class="fa-solid fa-phone"></i>0930605760</p>
+                    <div class="social-icons">
+                      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-right">
+                    <form action="#" method="post">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                      />
+                      <textarea
+                        name="Meassge"
+                        rows="6"
+                        placeholder="write Meassge"
+                      ></textarea>
+                      <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="footer">
+                <p>Allrights reserved &COPY; 2024.</p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
