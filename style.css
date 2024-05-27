@@ -71,6 +71,10 @@ body {
   transition: 0.5s;
 }
 
+.link_container ul li a.active {
+  color: #00ff88;
+}
+
 .socialmedias {
   margin-top: auto;
 }
