@@ -45,6 +45,7 @@ body {
 .profile_pic img {
   width: 150px;
   height: 150px;
+  border: 5px double #00cc70;
   border-radius: 75px;
 }
 
@@ -64,6 +65,10 @@ body {
 .link_container ul li a {
   text-decoration: none;
   color: #fff;
+}
+.link_container ul li a:hover {
+  color: #00cc70;
+  transition: 0.5s;
 }
 
 .socialmedias {
@@ -335,10 +340,11 @@ p {
 }
 
 /* portfolio */
+
 .portfolio {
   background-color: #0b0e11;
   color: #fff;
-  padding: 60px 0;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -363,6 +369,12 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  background-color: #2b2e33;
 }
 
 .portfolio-img {
@@ -372,6 +384,11 @@ p {
   background-size: cover;
   border-radius: 10px;
   margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover .portfolio-img {
+  transform: scale(1.1);
 }
 
 .portfolio-details h3 {
@@ -384,6 +401,13 @@ p {
   font-size: 16px;
   color: #cccccc;
   margin-top: 10px;
+}
+
+.btn_holder {
+  padding: 30px 0;
+}
+.show_btn {
+  margin: 0 80px 0 0;
 }
 
 /* contact */
