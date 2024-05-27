@@ -14,3 +14,26 @@ document.addEventListener("DOMContentLoaded", function () {
   changeActiveLink();
   window.addEventListener("scroll", changeActiveLink);
 });
+
+// scroll functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const lazySections = document.querySelectorAll(".lazy-section");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  lazySections.forEach((section) => {
+    observer.observe(section);
+  });
+});

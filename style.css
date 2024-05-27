@@ -13,6 +13,21 @@ body {
   background-color: #0b0e11;
 }
 
+/* //////////////// */
+/* lazy loading section */
+.lazy-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.lazy-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ////////////// */
+
 .main_container {
   display: flex;
 }
@@ -27,7 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #090909e1;
+  background: #040404e2;
   color: #fff;
 }
 
@@ -40,12 +55,13 @@ body {
 
 .profile_pic h2 {
   margin-top: 10px;
+  /* border: none; */
 }
 
 .profile_pic img {
   width: 150px;
   height: 150px;
-  border: 5px double #00cc70;
+  border: 5px double gray;
   border-radius: 75px;
 }
 
@@ -471,12 +487,16 @@ form textarea {
   width: 100%;
   border: 0;
   outline: none;
-  background: #cac7c7;
+  background: #8e8c8c;
   padding: 15px;
   margin: 15px 0;
-  color: #8f8b8b;
+  color: #ffffff;
   font-size: 18px;
   border-radius: 6px;
+}
+form textarea::placeholder,
+form input::placeholder {
+  color: #c9c9c9;
 }
 form .btn2 {
   padding: 14px 60px;
