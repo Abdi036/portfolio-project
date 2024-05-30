@@ -8,13 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
 
-  let index = sections.length;
-
   // Change Active Link
   function changeActiveLink() {
+    let index = sections.length;
+
     while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
     navLinks.forEach((link) => link.classList.remove("active"));
-    navLinks[index].classList.add("active");
+    if (sections[index]) {
+      navLinks[index].classList.add("active");
+    }
   }
   changeActiveLink();
   window.addEventListener("scroll", changeActiveLink);
@@ -44,8 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateSlider() {
     const slideWidth = portfolioSlider.clientWidth;
     const totalItems = portfolioList.children.length;
-    const itemWidth = slideWidth / totalItems + 20.5;
-    console.log(itemWidth);
+    const itemWidth = slideWidth / totalItems + 25;
     portfolioList.style.transform = `translateX(-${
       currentIndex * itemWidth
     }px)`;
