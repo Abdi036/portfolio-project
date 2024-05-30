@@ -423,6 +423,42 @@ p {
   margin-top: 10px;
 }
 
+.portfolio-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-list {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.portfolio-item {
+  min-width: 30%;
+  box-sizing: border-box;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#prev-btn {
+  left: 10px;
+}
+
+#next-btn {
+  right: 10px;
+}
+
 .btn_holder {
   padding: 30px 0;
 }

@@ -1,24 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".link_container ul li a");
+  const lazySections = document.querySelectorAll(".lazy-section");
 
+  const portfolioSlider = document.querySelector(".portfolio-slider");
+  const portfolioList = document.querySelector(".portfolio-list");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+
+  let index = sections.length;
+
+  // Change Active Link
   function changeActiveLink() {
-    let index = sections.length;
-
     while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
     navLinks.forEach((link) => link.classList.remove("active"));
     navLinks[index].classList.add("active");
   }
-
   changeActiveLink();
   window.addEventListener("scroll", changeActiveLink);
-});
 
-// scroll functionality
-document.addEventListener("DOMContentLoaded", function () {
-  const lazySections = document.querySelectorAll(".lazy-section");
-
+  // Lazy Loading
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
@@ -36,4 +37,32 @@ document.addEventListener("DOMContentLoaded", function () {
   lazySections.forEach((section) => {
     observer.observe(section);
   });
+
+  // Slider Functionality
+  let currentIndex = 0;
+
+  function updateSlider() {
+    const slideWidth = portfolioSlider.clientWidth;
+    const totalItems = portfolioList.children.length;
+    const itemWidth = slideWidth / totalItems + 20.5;
+    console.log(itemWidth);
+    portfolioList.style.transform = `translateX(-${
+      currentIndex * itemWidth
+    }px)`;
+  }
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex =
+      (currentIndex - 1 + portfolioList.children.length) %
+      portfolioList.children.length;
+    updateSlider();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % portfolioList.children.length;
+    updateSlider();
+  });
+
+  window.addEventListener("resize", updateSlider);
+  updateSlider();
 });
